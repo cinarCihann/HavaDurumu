@@ -1,1 +1,11 @@
-/bin/
+# Eclipse klasörleri ve ayarları
+.classpath
+.project
+.settings/
+bin/
+target/
+*.class
+.DS_Store
+Thumbs.db
+*.iml
+.idea/
