@@ -20,7 +20,7 @@ ve bu verileri PostgreSQL veritabanına kaydeden bir **Java konsol uygulamasıd�
 
 1. Bu projeyi klonlayın:
    ```bash
-   git clone https://github.com/kullaniciadi/HavaDurumu.git
+   git clone https://github.com/cinarCihan/HavaDurumu.git
    ```
 
 2. Projeyi tercih ettiğiniz Java IDE’sinde açın.
@@ -38,16 +38,11 @@ ve bu verileri PostgreSQL veritabanına kaydeden bir **Java konsol uygulamasıd�
    CREATE DATABASE weatherdb;
    ```
 
-6. Ardından aşağıdaki tabloyu oluşturun:
-   ```sql
-   CREATE TABLE weather_history (
-       id SERIAL PRIMARY KEY,
-       city VARCHAR(50),
-       temperature DECIMAL(5,2),
-       description VARCHAR(100),
-       query_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
+6. Repository’de bulunan `weatherdb.sql` dosyasını kullanarak tabloları oluşturun:
+   ```bash
+   psql -U [kullanıcı_adı] -d weatherdb -f weatherdb.sql
    ```
+   Bu dosya, gerekli tablo yapısını (`weather_history`) ve sütunları otomatik olarak oluşturacaktır.
 
 7. `Database.java` içindeki bağlantı bilgilerini kendi veritabanınıza göre düzenleyin:
    ```java
@@ -109,6 +104,12 @@ com.weatherapp/
 
 ---
 
+## 👨‍💻 Geliştirici
+
+GitHub: [@cinarCihan](https://github.com/cinarCihan)
+
+---
+
 ## 📝 Lisans
 
-Bu proje açık kaynaklıdır.  
+Bu proje açık kaynaklıdır. 
